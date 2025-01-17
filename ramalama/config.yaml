@@ -1,8 +1,8 @@
-name: "llama.cpp"
+name: "ramalama"
 description: "GPU accelerated llama.cpp using Vulkan"
 version: "1.0.0"
-slug: "llama.cpp"
-init: false
+slug: "ramalama"
+init: true
 arch:
   - aarch64
   - amd64
@@ -18,4 +18,4 @@ options:
 schema:
   repository: str
   file: str
-#image: "ghcr.io/sanctuary-systems-com/{arch}-llama-cpp-vulkan"
+#image: "ghcr.io/sanctuary-systems-com/{arch}-ramalama-vulkan"
