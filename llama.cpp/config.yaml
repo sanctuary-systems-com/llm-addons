@@ -12,3 +12,4 @@ arch:
 devices:
   - /dev/dri
   - /dev/kfd
+image: "ghcr.io/sanctuary-systems-com/{arch}-llama-cpp-vulkan"
