@@ -1,0 +1,21 @@
+name: "ramalama whisper"
+description: "GPU accelerated whisper.cpp using Vulkan"
+version: "1.0.0"
+slug: "ramalama-whisper"
+init: true
+discovery:
+  - wyoming
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+video: true
+ports:
+  10303/tcp: 10303
+options:
+  voice: "base.en-q5_1"
+schema:
+  voice: str
+#image: "ghcr.io/sanctuary-systems-com/{arch}-ramalama-whisper-vulkan"
