@@ -2,7 +2,6 @@ name: "ramalama whisper"
 description: "GPU accelerated whisper.cpp using Vulkan"
 version: "1.0.0"
 slug: "ramalama-whisper"
-init: true
 discovery:
   - wyoming
 arch:
