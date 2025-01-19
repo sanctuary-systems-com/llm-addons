@@ -2,7 +2,6 @@ name: "ramalama"
 description: "GPU accelerated llama.cpp using Vulkan"
 version: "1.0.0"
 slug: "ramalama"
-init: true
 arch:
   - aarch64
   - amd64
