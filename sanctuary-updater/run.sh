@@ -31,6 +31,7 @@ if ! verlte "${ADDON_VERSION}" "${OS_VERSION}"; then
         sleep 1
     done
     rm /share/update.raucb
+    bashio::host.reboot
 else
     echo "Addon version (${ADDON_VERSION}) <= OS version (${OS_VERSION})"
 fi
