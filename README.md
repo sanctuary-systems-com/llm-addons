@@ -10,6 +10,16 @@ Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
 This repository contains the following add-ons
 
+### [Sanctuary updater](./sanctuary-updater)
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
+
+Installs OTA updates of the [Sanctuary Systems hassos fork](https://github.com/sanctuary-systems-com/operating-system) (GPU kernel patches)
+
 ### [Ramalama](./ramalama)
 
 ![Supports aarch64 Architecture][aarch64-shield]
@@ -18,7 +28,7 @@ This repository contains the following add-ons
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-GPU accelerated llama.cpp images using Vulkan from Ramalama.
+GPU accelerated [llama.cpp](https://github.com/ggerganov/llama.cpp) [Ramalama](https://github.com/containers/ramalama) images using Vulkan from.
 
 Currently using https://github.com/ggerganov/llama.cpp/pull/9639
 
@@ -30,7 +40,9 @@ Currently using https://github.com/ggerganov/llama.cpp/pull/9639
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-GPU accelerated whisper.cpp images using Vulkan from Ramalama.
+GPU accelerated [whisper.cpp](https://github.com/ggerganov/whisper.cpp/) [Ramalama](https://github.com/containers/ramalama) images using Vulkan.
+
+Currently using [Wyoming Whisper API client](https://github.com/ser/wyoming-whisper-api-client)
 
 <!--
 
