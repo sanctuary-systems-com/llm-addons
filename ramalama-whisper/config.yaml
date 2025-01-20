@@ -17,4 +17,4 @@ options:
   voice: "base.en-q5_1"
 schema:
   voice: str
-#image: "ghcr.io/sanctuary-systems-com/{arch}-ramalama-whisper-vulkan"
+image: "ghcr.io/sanctuary-systems-com/{arch}-ramalama-whisper-vulkan"

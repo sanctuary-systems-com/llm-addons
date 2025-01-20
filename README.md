@@ -10,7 +10,7 @@ Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 
 This repository contains the following add-ons
 
-### [Example add-on](./example)
+### [Ramalama](./ramalama)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
@@ -18,7 +18,19 @@ This repository contains the following add-ons
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-_Example add-on to use as a blueprint for new add-ons._
+GPU accelerated llama.cpp images using Vulkan from Ramalama.
+
+Currently using https://github.com/ggerganov/llama.cpp/pull/9639
+
+### [Ramalama whisper](./ramalama-whisper)
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
+
+GPU accelerated whisper.cpp images using Vulkan from Ramalama.
 
 <!--
 
