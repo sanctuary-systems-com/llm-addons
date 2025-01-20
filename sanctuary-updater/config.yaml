@@ -18,4 +18,4 @@ options:
   ota_url: "http://pkg.sanctuary-systems.com/hassos/haos_rpi5-64-15.0.dev0.raucb"
 schema:
   ota_url: url
-#image: "ghcr.io/sanctuary-systems-com/{arch}-sanctuary-updater"
+image: "ghcr.io/sanctuary-systems-com/{arch}-sanctuary-updater"
