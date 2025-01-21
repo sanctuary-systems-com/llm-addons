@@ -1,7 +1,7 @@
 #FROM quay.io/ramalama/vulkan:latest
 FROM pepijndevos/llama-cpp-vulkan:latest
 
-RUN dnf install -y jq
+RUN dnf install -y jq python
 
 # Copy data for add-on
 COPY run.sh /
