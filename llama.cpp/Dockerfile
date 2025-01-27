@@ -14,7 +14,7 @@ RUN cmake --build build --config Release
 RUN cmake --install build
 
 FROM $BUILD_FROM
-RUN apk add --no-cache mesa-vulkan-ati vulkan-loader libcurl libgomp python3
+RUN apk add --no-cache mesa-vulkan-ati vulkan-loader libcurl libgomp python3 py3-requests
 
 COPY --from=build /tmp/llama /
 

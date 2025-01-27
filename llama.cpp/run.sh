@@ -10,7 +10,6 @@ TEMPLATE="$(bashio::config 'chat_template')"
 
 if [ ! -z "$TEMPLATE" ]; then
   python /get_hf_chat_template.py $TEMPLATE > template.json
-  cat template.json
   llama-server --jinja -hfr "$REPO" -hff "$FILE" -ngl 999 \
                --chat-template-file template.json \
                --host 0.0.0.0 --port 10202
