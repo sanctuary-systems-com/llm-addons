@@ -13,9 +13,11 @@ video: true
 ports:
   10202/tcp: 10202
 options:
-  repository: "bartowski/Qwen2.5-7B-Instruct-GGUF"
-  file: "Qwen2.5-7B-Instruct-Q4_K_M.gguf"
+  repository: "NousResearch/Hermes-3-Llama-3.1-8B-GGUF"
+  file: "Hermes-3-Llama-3.1-8B.Q4_K_M.gguf"
+  chat_template: "NousResearch/Hermes-3-Llama-3.1-8B tool_use"
 schema:
   repository: str
   file: str
+  chat_template: str
 #image: "ghcr.io/sanctuary-systems-com/{arch}-llama-cpp-vulkan"
