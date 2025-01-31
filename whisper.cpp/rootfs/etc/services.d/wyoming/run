@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv bashio
+
+cd /api
+./script/run --uri tcp://0.0.0.0:10303 --debug --api http://localhost:8080/inference

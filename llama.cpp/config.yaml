@@ -20,4 +20,4 @@ schema:
   repository: str
   file: str
   chat_template: str
-#image: "ghcr.io/sanctuary-systems-com/{arch}-llama-cpp-vulkan"
+image: "ghcr.io/sanctuary-systems-com/{arch}-llama-cpp-vulkan"

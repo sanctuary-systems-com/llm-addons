@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv bashio
+
+export LLAMA_CACHE="/data/models"
+export CONFIG_PATH=/data/options.json
+export GGML_VK_FORCE_MAX_ALLOCATION_SIZE=1073741824
+
+#VOICE="$(bashio::config 'voice')"
+VOICE=$(jq --raw-output '.voice // empty' $CONFIG_PATH)
+
+mkdir -p $LLAMA_CACHE
+/download-ggml-model.sh $VOICE $LLAMA_CACHE
+
+# start whisper
+whisper-server -m "$LLAMA_CACHE/ggml-$VOICE.bin" --host 0.0.0.0 --port 8080

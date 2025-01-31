@@ -1,0 +1,19 @@
+name: "whisper.cpp"
+description: "BROKEN! GPU accelerated whisper.cpp using Vulkan"
+version: "1.0.0"
+slug: "whisper.cpp"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+video: true
+ports:
+  10303/tcp: 10303
+options:
+  voice: "base.en-q5_1"
+schema:
+  voice: str
+image: "ghcr.io/sanctuary-systems-com/{arch}-whisper-cpp-vulkan"
