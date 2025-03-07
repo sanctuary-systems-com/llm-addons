@@ -8,7 +8,7 @@ WORKDIR /wyoming-whisper-cpp
 RUN CMAKE_ARGS="-DGGML_VULKAN=1 -DGGML_NATIVE=0" pip wheel . --no-deps --wheel-dir /tmp/whisper
 
 FROM $BUILD_FROM
-RUN apk add --no-cache mesa-vulkan-ati vulkan-loader wget2 libgomp py3-pip
+RUN apk add --no-cache mesa-vulkan-ati vulkan-loader wget libgomp py3-pip
 
 ENV VIRTUAL_ENV=/opt/venv
 RUN python3 -m venv $VIRTUAL_ENV
