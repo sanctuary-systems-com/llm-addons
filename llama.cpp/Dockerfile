@@ -13,13 +13,13 @@ RUN cmake --build build --config Release
 RUN cmake --install build
 
 FROM $BUILD_FROM
-RUN apk add --no-cache mesa-vulkan-ati vulkan-loader libcurl libgomp python3 py3-requests
+RUN apk add --no-cache mesa-vulkan-ati vulkan-loader libcurl libgomp python3 py3-aiohttp py3-psutil
 
 COPY --from=build /tmp/llama /
 
+ADD https://github.com/pepijndevos/llama_multiserver.git /llama_multiserver
+
 COPY run.sh /
 RUN chmod a+x /run.sh
-
-ADD https://raw.githubusercontent.com/ggerganov/llama.cpp/refs/heads/master/scripts/get_hf_chat_template.py /get_hf_chat_template.py
 
 CMD ["/run.sh"]

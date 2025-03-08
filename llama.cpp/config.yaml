@@ -1,5 +1,5 @@
 name: "llama.cpp"
-description: "BROKEN! GPU accelerated llama.cpp using Vulkan"
+description: "GPU accelerated llama.cpp using Vulkan"
 version: "1.0.0"
 slug: "llama.cpp"
 init: false
@@ -11,13 +11,5 @@ arch:
   - i386
 video: true
 ports:
-  10202/tcp: 10202
-options:
-  repository: "NousResearch/Hermes-3-Llama-3.1-8B-GGUF"
-  file: "Hermes-3-Llama-3.1-8B.Q4_K_M.gguf"
-  chat_template: "NousResearch/Hermes-3-Llama-3.1-8B tool_use"
-schema:
-  repository: str
-  file: str
-  chat_template: str
+  8765/tcp: 8765
 image: "ghcr.io/sanctuary-systems-com/{arch}-llama-cpp-vulkan"
