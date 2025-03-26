@@ -1,6 +1,6 @@
 name: "llama.cpp"
 description: "GPU accelerated llama.cpp using Vulkan"
-version: "1.0.0"
+version: "1.1.0"
 slug: "llama.cpp"
 init: false
 arch:
