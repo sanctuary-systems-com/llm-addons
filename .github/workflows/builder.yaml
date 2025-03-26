@@ -86,7 +86,7 @@ jobs:
 
       - name: Get information
         id: info
-        uses: home-assistant/actions/helpers/info@master
+        uses: pepijndevos/actions/helpers/info@patch-1
         with:
           path: "./${{ matrix.addon }}"
 
