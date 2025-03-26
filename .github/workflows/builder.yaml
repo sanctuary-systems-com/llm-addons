@@ -66,7 +66,7 @@ jobs:
         arch: ["aarch64", "amd64", "armhf", "armv7", "i386"]
         include:
           - arch: aarch64
-            runner: ubuntu-24.04-arm64
+            runner: self-hosted
           - arch: amd64
             runner: ubuntu-latest
           - arch: armhf
