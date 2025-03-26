@@ -17,6 +17,7 @@ FROM $BUILD_FROM
 RUN apk add --no-cache mesa-vulkan-ati vulkan-loader libcurl libgomp python3 py3-aiohttp py3-psutil
 
 COPY --from=build /tmp/llama /
+COPY --from=build /llama.cpp/models/templates /templates
 
 ADD https://github.com/pepijndevos/llama_multiserver.git /llama_multiserver
 
