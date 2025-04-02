@@ -5,7 +5,12 @@ OS_VERSION="$(bashio::os.version)"
 ADDON_VERSION="$(bashio::addon.version)"
 
 verlte() {
-    printf '%s\n' "$1" "$2" | sort -c -V
+    # Replace .dev with ~ to make it sort before the corresponding release
+    # ~ sorts before most ASCII characters in version sort
+    local v1="${1/.dev/~dev}"
+    local v2="${2/.dev/~dev}"
+
+    printf '%s\n' "$v1" "$v2" | sort -c -V
 }
 
 echo "URL" $OTA_URL
