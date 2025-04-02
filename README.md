@@ -29,7 +29,6 @@ Uses [Wyoming Whisper.cpp](https://github.com/sanctuary-systems-com/wyoming-whis
 ### [Sanctuary updater](./sanctuary-updater)
 
 ![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
 
 Installs OTA updates of the [Sanctuary Systems hassos fork](https://github.com/sanctuary-systems-com/operating-system) (GPU kernel patches)
 
