@@ -1,6 +1,6 @@
 name: "Sanctuary Updater"
 description: "Updater for the Sanctuary Systems fork for of Home Assistant"
-version: "15.1.1"
+version: "15.1"
 slug: "sanctuary-updater"
 init: false
 arch:
