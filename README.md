@@ -8,37 +8,28 @@ This repository contains repositories for running GPU accelerated LLMs on Home A
 
 This repository contains the following add-ons
 
-### [Ramalama](./ramalama)
+### [Llama.cpp](./llama.cpp)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
 
-GPU accelerated [llama.cpp](https://github.com/ggerganov/llama.cpp) [Ramalama](https://github.com/containers/ramalama) images using Vulkan from.
+GPU accelerated [llama.cpp](https://github.com/ggerganov/llama.cpp) with Vulkan and tool calling enabled.
 
-Currently using https://github.com/ggerganov/llama.cpp/pull/9639
+Uses [llama multiserver](https://github.com/pepijndevos/llama_multiserver) to serve Hugging Face models on demand.
 
-### [Ramalama whisper](./ramalama-whisper)
+### [Whisper.cpp](./whisper.cpp)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
 
-GPU accelerated [whisper.cpp](https://github.com/ggerganov/whisper.cpp/) [Ramalama](https://github.com/containers/ramalama) images using Vulkan.
+GPU accelerated [whisper.cpp](https://github.com/ggerganov/whisper.cpp/) using Vulkan.
 
-Currently using [Wyoming Whisper API client](https://github.com/ser/wyoming-whisper-api-client)
+Uses [Wyoming Whisper.cpp](https://github.com/sanctuary-systems-com/wyoming-whisper-cpp) for integration.
 
 ### [Sanctuary updater](./sanctuary-updater)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
 
 Installs OTA updates of the [Sanctuary Systems hassos fork](https://github.com/sanctuary-systems-com/operating-system) (GPU kernel patches)
 
