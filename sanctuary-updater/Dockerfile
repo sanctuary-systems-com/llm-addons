@@ -5,6 +5,7 @@ FROM $BUILD_FROM
 COPY run.sh /
 RUN chmod a+x /run.sh
 
+
 RUN apk add --no-cache busctl
 #RUN apk add --no-cache rauc --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/
 

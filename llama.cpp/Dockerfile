@@ -6,6 +6,7 @@ ADD https://github.com/ggerganov/llama.cpp.git /llama.cpp
 #ADD https://github.com/ggerganov/llama.cpp/archive/refs/heads/master.tar.gz /llama.tgz
 #RUN tar xzf /llama.tgz
 
+
 WORKDIR /llama.cpp
 ENV DESTDIR=/tmp/llama
 ENV CC=clang CXX=clang++
