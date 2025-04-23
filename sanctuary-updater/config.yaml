@@ -1,6 +1,6 @@
 name: "Sanctuary Updater"
 description: "Updater for the Sanctuary Systems fork for of Home Assistant"
-version: "15.1"
+version: "15.2"
 slug: "sanctuary-updater"
 init: false
 arch:
@@ -15,7 +15,7 @@ hassio_role: admin
 map:
   - share:rw
 options:
-  ota_url: "http://pkg.sanctuary-systems.com/hassos/haos_rpi5-64-15.1.raucb"
+  ota_url: "http://pkg.sanctuary-systems.com/hassos/haos_rpi5-64-15.2.raucb"
 schema:
   ota_url: url
 image: "ghcr.io/sanctuary-systems-com/{arch}-sanctuary-updater"
