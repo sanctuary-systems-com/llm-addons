@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM AS build
 
-RUN apk add --no-cache vulkan-loader-dev cmake build-base shaderc musl-dev linux-headers git py3-pip py3-scikit-build
+RUN apk add --no-cache vulkan-loader-dev cmake ninja build-base shaderc musl-dev linux-headers git py3-pip py3-scikit-build
 ADD https://github.com/sanctuary-systems-com/wyoming-whisper-cpp.git /wyoming-whisper-cpp
 
 WORKDIR /wyoming-whisper-cpp
