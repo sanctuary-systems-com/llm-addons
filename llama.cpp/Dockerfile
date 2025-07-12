@@ -7,6 +7,7 @@ ADD https://github.com/ggerganov/llama.cpp.git /llama.cpp
 #RUN tar xzf /llama.tgz
 
 WORKDIR /llama.cpp
+RUN git submodule update --init --recursive
 ENV DESTDIR=/tmp/llama
 ENV CC=clang CXX=clang++
 RUN cmake -G Ninja -B build -DGGML_NATIVE=OFF -DLLAMA_CURL=ON -DGGML_VULKAN=1
