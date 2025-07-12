@@ -15,7 +15,7 @@ hassio_role: admin
 map:
   - share:rw
 options:
-  ota_url: "http://pkg.sanctuary-systems.com/hassos/haos_rpi5-64-15.2.raucb"
+  ota_url: "http://pkg.sanctuary-systems.com/hassos/haos_rpi5-64-16.0.raucb"
 schema:
   ota_url: url
 image: "ghcr.io/sanctuary-systems-com/{arch}-sanctuary-updater"
