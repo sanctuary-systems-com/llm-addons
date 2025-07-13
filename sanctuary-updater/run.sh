@@ -1,19 +1,26 @@
 #!/usr/bin/with-contenv bashio
 
-OTA_URL="$(bashio::config 'ota_url')"
 OS_VERSION="$(bashio::os.version)"
 ADDON_VERSION="$(bashio::addon.version)"
+OTA_URL="http://pkg.sanctuary-systems.com/hassos/haos_rpi5-64-${ADDON_VERSION}.raucb"
 
 verlte() {
     printf '%s\n' "$1" "$2" | sort -c -V
 }
 
-echo "URL" $OTA_URL
-echo "OS" $OS_VERSION
-echo "ADDON" $ADDON_VERSION
+echo "URL: ${OTA_URL}"
+echo "OS version: ${OS_VERSION}"
+echo "Addon version: ${ADDON_VERSION}"
+if bashio::config.has_value 'force'; then
+    echo "Force update: $(bashio::config 'force')"
+fi
 
-if ! verlte "${ADDON_VERSION}" "${OS_VERSION}"; then
-    echo "Addon version (${ADDON_VERSION}) > OS version (${OS_VERSION})"
+if bashio::config.true 'force' || ! verlte "${ADDON_VERSION}" "${OS_VERSION}"; then
+    if bashio::config.true 'force'; then
+        echo "Forcing update as requested."
+    else
+        echo "Addon version (${ADDON_VERSION}) is newer than OS version (${OS_VERSION})."
+    fi
     curl -L -o /share/update.raucb "$OTA_URL"
     busctl call de.pengutronix.rauc / de.pengutronix.rauc.Installer InstallBundle sa{sv} "/mnt/data/supervisor/share/update.raucb" 0
     while true; do
@@ -33,5 +40,5 @@ if ! verlte "${ADDON_VERSION}" "${OS_VERSION}"; then
     rm /share/update.raucb
     bashio::host.reboot
 else
-    echo "Addon version (${ADDON_VERSION}) <= OS version (${OS_VERSION})"
+    echo "Addon version (${ADDON_VERSION}) is not newer than OS version (${OS_VERSION}). No update needed."
 fi
