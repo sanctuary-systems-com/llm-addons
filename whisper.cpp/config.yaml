@@ -1,6 +1,6 @@
 name: "whisper.cpp"
 description: "GPU accelerated whisper.cpp using Vulkan"
-version: "1.0.2"
+version: "1.0.3"
 slug: "whisper.cpp"
 init: false
 arch:
@@ -10,6 +10,8 @@ arch:
   #- armv7
   #- i386
 video: true
+discovery:
+  - wyoming
 ports:
   10303/tcp: 10303
 options:
