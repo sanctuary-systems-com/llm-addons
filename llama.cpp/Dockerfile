@@ -2,6 +2,8 @@ ARG BUILD_FROM
 FROM $BUILD_FROM AS build
 
 RUN apk add --no-cache vulkan-loader-dev cmake ninja build-base curl-dev shaderc musl-dev linux-headers git clang
+# https://github.com/ggml-org/llama.cpp/issues/14542
+RUN apk add glslang-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/
 #ADD https://github.com/ggerganov/llama.cpp.git /llama.cpp
 RUN git clone --recursive https://github.com/ggerganov/llama.cpp.git /llama.cpp
 #ADD https://github.com/ggerganov/llama.cpp/archive/refs/heads/master.tar.gz /llama.tgz
