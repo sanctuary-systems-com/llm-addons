@@ -3,7 +3,7 @@ FROM $BUILD_FROM AS build
 
 RUN apk add --no-cache vulkan-loader-dev cmake ninja build-base shaderc musl-dev linux-headers git py3-pip py3-scikit-build
 # https://github.com/ggml-org/llama.cpp/issues/14542
-RUN apk add glslang-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/
+RUN apk add --no-cache glslang-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/
 ADD https://github.com/sanctuary-systems-com/wyoming-whisper-cpp.git /wyoming-whisper-cpp
 
 WORKDIR /wyoming-whisper-cpp
