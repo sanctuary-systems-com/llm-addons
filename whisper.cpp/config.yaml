@@ -1,6 +1,6 @@
 name: "whisper.cpp"
 description: "GPU accelerated whisper.cpp using Vulkan"
-version: "1.0.3"
+version: "1.0.4"
 slug: "whisper.cpp"
 init: false
 arch:
