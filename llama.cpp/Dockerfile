@@ -17,7 +17,12 @@ RUN cmake --build build --config Release
 RUN cmake --install build
 
 FROM $BUILD_FROM
-RUN apk add --no-cache mesa-vulkan-ati vulkan-loader libcurl libgomp python3 py3-aiohttp py3-psutil
+RUN apk add --no-cache  libcurl libgomp python3 py3-aiohttp py3-psutil
+
+# Install Vulkan drivers from edge repository
+# https://gitlab.alpinelinux.org/alpine/aports/-/merge_requests/87454
+RUN apk add --no-cache mesa-vulkan-ati vulkan-loader --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/
+RUN apk add --no-cache --allow-untrusted mesa-vulkan-intel --repository=https://gitlab.alpinelinux.org/pepijndevos/aports/-/jobs/1961775/artifacts/raw/packages/main/
 
 COPY --from=build /tmp/llama /
 COPY --from=build /llama.cpp/models/templates /templates
